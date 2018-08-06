@@ -6,7 +6,6 @@
 	<persistence-unit name="TestPersistence"
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		<!-- <provider>org.hibernate.ejb.HibernatePersistence</provider> -->
 
 		<class>com.sgowor.HibernateEtityManagerSample.model.Car</class>
 

@@ -1,7 +1,5 @@
 package com.sgowor.HibernateSessionSample;
 
-import java.util.Date;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -17,7 +15,6 @@ public class App {
 		Book firstBook = new Book();
 		firstBook.setTitle("The first of books");
 		firstBook.setAuthor(firstAuthor);
-		firstBook.setCreationTime(new Date());
 
 		Book secondBook = new Book();
 		secondBook.setTitle("The second book");

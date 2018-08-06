@@ -8,7 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class Author {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(generator = "authoridgen")
 	private Integer id;
 	@Basic
 	private String name;

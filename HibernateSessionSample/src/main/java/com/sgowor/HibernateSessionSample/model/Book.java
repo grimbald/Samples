@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "Book")
 public class Book extends HistoryLogger {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(generator = "bookidgen")
 	private Integer id;
 	@Basic
 	private String title;

@@ -2,13 +2,16 @@ package com.sgowor.HibernateSessionSample.model;
 
 import java.util.Date;
 
+import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.CreationTimestamp;
+
+@MappedSuperclass
 public class HistoryLogger {
+	@CreationTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
-	// @Generated(GenerationTime.INSERT)
-	// @Column(name = "creationTime", insertable = false)
 	private Date creationTime;
 
 	public Date getCreationTime() {

@@ -5,6 +5,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.sgowor.HibernateSessionSample.model.Author;
 import com.sgowor.HibernateSessionSample.model.Book;
+import com.sgowor.HibernateSessionSample.model.HistoryLogger;
 
 public abstract class HibernateConfigurator {
 
@@ -13,6 +14,7 @@ public abstract class HibernateConfigurator {
 	static {
 		configuration.addAnnotatedClass(Author.class);
 		configuration.addAnnotatedClass(Book.class);
+		configuration.addAnnotatedClass(HistoryLogger.class);
 	}
 
 	public static SessionFactory getSessionFactory() {

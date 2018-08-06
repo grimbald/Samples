@@ -1,15 +1,10 @@
 package com.sgowor.HibernateEntityManagerSample.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table
+//@Entity
+//@Table
 public class Car {
-	@Id
-	@GeneratedValue
+	// @Id
+	// @GeneratedValue
 	private Integer id;
 	private String mark;
 	private String model;

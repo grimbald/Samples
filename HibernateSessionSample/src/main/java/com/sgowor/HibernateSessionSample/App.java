@@ -1,5 +1,9 @@
 package com.sgowor.HibernateSessionSample;
 
+import java.util.List;
+
+import javax.persistence.criteria.CriteriaQuery;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
@@ -30,6 +34,12 @@ public class App {
 		session.saveOrUpdate(firstAuthor);
 		session.saveOrUpdate(firstBook);
 		session.saveOrUpdate(secondBook);
+
+		CriteriaQuery<Book> criteriaQuery = session.getCriteriaBuilder().createQuery(Book.class);
+		criteriaQuery.from(Book.class);
+		List<Book> books = session.createQuery(criteriaQuery).getResultList();
+		books.stream().forEach((a) -> System.out.println(a.getTitle()));
+
 		session.getTransaction().commit();
 		session.close();
 		sessionFactory.close();

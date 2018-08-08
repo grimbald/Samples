@@ -7,9 +7,8 @@
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-
- 		<mapping-file>com/sgowor/HibernateEntityManagerSample/model/Car.hbm.xml</mapping-file>  
 		<class>com.sgowor.HibernateEntityManagerSample.model.RandomId</class>
+		<class>com.sgowor.HibernateEntityManagerSample.model.Car</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
